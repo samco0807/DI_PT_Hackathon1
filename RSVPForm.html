@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="RSVPForm.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css
+    ">
+    <title>Document</title>
+</head>
+<body>
+
+<!-- NAVBAR -->
+
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Navbar</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="EventCreationForm.html">Create Event</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="Event Calendar.html">Calendar</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">View</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Dropdown
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+          </ul>
+        </li>
+      </ul>
+      <form class="d-flex" role="search">
+        <input class="form-control me-2" type="search" placeholder="Search Event" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+    </div>
+  </div>
+</nav>
+
+
+<!-- EVENT DETAILS -->
+<div class="form-container">
+<div class="event-detail-container">
+  <header class="mb-4">
+    <h1 class="text-center">RSVP</h1>
+    <nav class="text-center">
+      <a href="EventListView.html" class="btn btn-secondary">Back to Events</a>
+    </nav>
+  </header>
+
+  <div class="card event-card">
+    <div class="card-body">
+      <h5 class="card-title" id="event-name">Event Name</h5>
+      <p class="card-text"><strong>Date:</strong> <span id="event-date">DD MM YYYY</span></p>
+      <p class="card-text"><strong>Time:</strong> <span id="event-time">10:00 AM</span></p>
+      <p class="card-text"><strong>Event category: </strong> <span id="event-category">Birthday</span></p>
+      <p class="card-text"><strong>Location:</strong> <span id="event-location">Example Location</span></p>
+      <p class="card-text"><strong>Description:</strong> <span id="event-description">Full description of the event...</span></p>
+    </div>
+  </div>
+
+      <!-- FINAL RSVP FORM -->
+
+  
+    <form action="">
+
+      <!-- First Name -->
+        <div class="input-group mb-3">
+            <span class="input-group-text" id="firstName">First Name</span>
+            <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+          </div>
+      <!-- Last Name -->
+        <div class="input-group mb-3">
+            <span class="input-group-text" id="lastName">Last Name</span>
+            <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+          </div>
+
+          <!-- Phone number -->
+          <div class="input-group mb-3">
+            <span class="input-group-text" id="inputGroup-sizing-default">Phone number</span>
+            <input type="tel" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+          </div>
+
+          <!-- Email -->
+          <div class="input-group mb-3">
+            <input type="text" class="form-control" placeholder="exemple" aria-label="Username">
+            <span class="input-group-text" id="email">@</span>
+            <input type="text" class="form-control" placeholder="ex: gmail.com" aria-label="Server">
+          </div>
+
+          <h3>I will attend the event</h3>
+                
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="rsvp" id="attending" value="attending">
+            <label class="form-check-label" for="attending">Attending</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="rsvp" id="not-attending" value="not-attending">
+            <label class="form-check-label" for="not-attending">Not Attending</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="rsvp" id="maybe" value="maybe">
+            <label class="form-check-label" for="maybe">Maybe</label>
+          </div>
+  
+          <!-- ADDITIONNAL GUESTS -->
+          <div class="input-group mb-3">
+            <span class="input-group-text" id="inputGroup-sizing-default">Number of additional guests</span>
+            <input type="number" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+          </div>
+
+          <!-- COMMENTS -->
+          <div class="input-group mb-3">
+            <span class="input-group-text" id="inputGroup-sizing-default">Comments</span>
+            <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+          </div>
+
+         
+         <!-- <button type="button" class="btn btn-success">Yes</button>
+         <button type="button" class="btn btn-danger">No</button> -->
+
+  <!-- Submit <Button></Button> -->
+   <div>
+  <button type="submit" class="btn btn-primary">Submit RSVP</button>
+  <button type="button" class="btn btn-secondary">Save</button>
+
+</div>
+
+    </form>
+  </div>
+    <script src="RSVPForm.js">
+
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+
+</body>
+</html>
