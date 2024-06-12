@@ -61,7 +61,7 @@
   </header>
 
   <div class="card event-card">
-    <div class="card-body">
+    <div class="card-body" id="event-details">
       <h5 class="card-title" id="event-name">Event Name</h5>
       <p class="card-text"><strong>Date:</strong> <span id="event-date">DD MM YYYY</span></p>
       <p class="card-text"><strong>Time:</strong> <span id="event-time">10:00 AM</span></p>
@@ -73,8 +73,7 @@
 
       <!-- FINAL RSVP FORM -->
 
-  
-    <form action="">
+    <form action="" id="rsvp-form">
 
       <!-- First Name -->
         <div class="input-group mb-3">
@@ -95,23 +94,22 @@
 
           <!-- Email -->
           <div class="input-group mb-3">
-            <input type="text" class="form-control" placeholder="exemple" aria-label="Username">
             <span class="input-group-text" id="email">@</span>
-            <input type="text" class="form-control" placeholder="ex: gmail.com" aria-label="Server">
+            <input id="useremail" type="email" class="form-control" placeholder="exemple@exemple.com" aria-label="Server">
           </div>
 
           <h3>I will attend the event</h3>
                 
           <div class="form-check">
-            <input class="form-check-input" type="radio" name="rsvp" id="attending" value="attending">
+            <input class="form-check-input" type="radio" name="attending" id="attending" value="attending">
             <label class="form-check-label" for="attending">Attending</label>
           </div>
           <div class="form-check">
-            <input class="form-check-input" type="radio" name="rsvp" id="not-attending" value="not-attending">
+            <input class="form-check-input" type="radio" name="not-attending" id="not-attending" value="not-attending">
             <label class="form-check-label" for="not-attending">Not Attending</label>
           </div>
           <div class="form-check">
-            <input class="form-check-input" type="radio" name="rsvp" id="maybe" value="maybe">
+            <input class="form-check-input" type="radio" name="maybe" id="maybe" value="maybe">
             <label class="form-check-label" for="maybe">Maybe</label>
           </div>
   
