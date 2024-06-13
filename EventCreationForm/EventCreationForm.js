@@ -1,3 +1,7 @@
+document.addEventListener("DOMContentLoaded", () => {
+  const form = document.querySelector(".event-form");
+});
+
 // SELECT AND SAVE IN LOCAL STORAGE DATA
 
 const saveEvent = document.querySelector(".event-form");
@@ -34,23 +38,6 @@ saveEvent.addEventListener("submit", (e) => {
     rsvp_link: `${window.location.origin}/RSVPForm.html?eventId=${eventId}`,
   };
 
-// Create an id for each event
-const eventId = Date.now().toString(); //This line generates a unique identifier for the event based on the current timestamp.
-
-  const saveEvent = (eventData) => {
-    // Get existing events from local storage
-    let events = JSON.parse(localStorage.getItem("events")) || [];
-
-    // Add the new event to the list
-    events.push(eventData);
-
-    // Save the updated list back to local storage
-    localStorage.setItem("events", JSON.stringify(events));
-
-    saveEvent(eventData);
-  };
-
-  
   mailsOfAttendees.forEach((email) => {
     emailjs.send("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", {
       to_email: email.trim(),
@@ -67,6 +54,21 @@ const eventId = Date.now().toString(); //This line generates a unique identifier
       rsvp_link: `${window.location.origin}/RSVPForm.html?eventId=${eventId}`,
     });
   });
+  // Create an id for each event
+  const eventId = Date.now().toString(); //This line generates a unique identifier for the event based on the current timestamp.
+
+  const saveEvent = (eventData) => {
+    // Get existing events from local storage
+    let events = JSON.parse(localStorage.getItem("events")) || [];
+
+    // Add the new event to the list
+    events.push(eventData);
+
+    // Save the updated list back to local storage
+    localStorage.setItem("events", JSON.stringify(events));
+
+    saveEvent(eventData);
+  };
 });
 
 // ADD AND DELETE A NEW ATTENDEE EMAIL TO THE FORM
