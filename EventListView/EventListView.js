@@ -14,7 +14,7 @@ const loadEvents = () => {
   const tableBody = document.querySelector("tbody");
 
   // Clear the existing table content
-  tableBody.innerHTML = "";
+  // tableBody.innerHTML = "";
 
   // Populate the table with events
   events.forEach((event) => {
