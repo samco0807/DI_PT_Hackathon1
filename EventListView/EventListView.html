@@ -34,12 +34,12 @@
               <a
                 class="nav-link active"
                 aria-current="page"
-                href="EventCreationForm.html"
+                href="/EventCreationForm/EventCreationForm.html"
                 >Create Event</a
               >
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="Event Calendar.html">Calendar</a>
+              <a class="nav-link" href="/EventCalendarView/EventCalendarView.html">Calendar</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">View</a>
@@ -80,8 +80,8 @@
     </nav>
     <h1 class="text-center">My Events</h1>
     <nav class="text-center">
-      <a href="EventCreationForm.html" class="btn btn-primary">Create Event</a>
-      <a href="Event Calendar.html" class="btn btn-secondary">Calendar View</a>
+      <a href="/EventCreationForm/EventCreationForm.html" class="btn btn-primary">Create Event</a>
+      <a href="/EventCreationForm/EventCreationForm.html" class="btn btn-secondary">Calendar View</a>
     </nav>
 
     <!-- SEARCH BAR -->
@@ -96,7 +96,7 @@
             aria-label="Search"
             id="search-box"
           />
-          <!-- <button class="btn btn-outline-success" type="submit">Search</button> -->
+         
 
           <div class="dropdown">
             <button
@@ -144,53 +144,54 @@
             </tr>
           </thead>
           <tbody>
-            <tr>
+            <tr data-id="event1">
               <th scope="row">29.09.2023</th>
               <td>Finished</td>
-              <td>Karaoke</td>
+              <td>Happy Birthday Sarah</td>
               <td>Tel Aviv</td>
               <td>Birthday</td>
               <td>30</td>
               <td>5</td>
-              <td></td>
+              <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis, omnis!</td>
               <td>
                 <button type="button" class="btn btn-primary">Edit</button>
                 <button type="button" class="btn btn-secondary">Delete</button>
                 <button type="button" class="btn btn-warning">
-                  <a href="Reminder.html">Reminder</a>
+                  <a href="/Reminder/Reminder.html">Reminder</a>
                 </button>
               </td>
             </tr>
-            <tr>
+            <tr data-id="event2">
               <th scope="row">01.02.2024</th>
               <td>Coming</td>
-              <td>Thornton</td>
-              <td>@fat</td>
-              <td>@fat</td>
-              <td>@fat</td>
-              <td>@fat</td>
-              <td>@fat</td>
+              <td>Love</td>
+              <td>Tel Aviv</td>
+              <td>Wedding</td>
+              <td>210</td>
+              <td>43</td>
+              <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, ratione.</td>
               <td>
                 <button type="button" class="btn btn-primary">Edit</button>
                 <button type="button" class="btn btn-secondary">Delete</button>
                 <button type="button" class="btn btn-warning">
-                  <a href="Reminder.html">Reminder</a>
+                  <a href="/Reminder/Reminder.html">Reminder</a>
                 </button>
               </td>
             </tr>
-            <tr>
+            <tr data-id="event3">
               <th scope="row">05.05.2024</th>
-              <td colspan="2">Ongoing</td>
-              <td></td>
-              <td>@twitter</td>
-              <td>@twitter</td>
-              <td>@twitter</td>
-              <td>@twitter</td>
+              <td>Ongoing</td>
+              <td>Team Building</td>
+              <td>Potion Bar Tel Aviv</td>
+              <td>Afterwork</td>
+              <td>56</td>
+              <td>4</td>
+              <td>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolore, laboriosam?</td>
               <td>
                 <button type="button" class="btn btn-primary">Edit</button>
                 <button type="button" class="btn btn-secondary">Delete</button>
                 <button type="button" class="btn btn-warning">
-                  <a href="Reminder.html">Reminder</a>
+                  <a href="/Reminder/Reminder.html">Reminder</a>
                 </button>
               </td>
             </tr>
